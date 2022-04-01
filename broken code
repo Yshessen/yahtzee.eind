@@ -1,0 +1,65 @@
+        for(let j = 1; j <= 6; j++ ){
+            let sameThree= 0;
+            for( let i= 0; i < 5; i++){
+            if(randomNum[i] == j){
+            sameThree++;
+            }
+            for(let g = 1; g <= 6; g++ ){
+                let sameTwo= 0;
+                for( let i= 0; i < 5; g++){
+                if(randomNum[i] == g){
+                sameTwo++;
+                }
+        }
+        if(sameThree == 3 && sameTwo == 2) {
+
+            console.log("Full House"+ j + g);
+            document.getElementById("punten-9").innerHTML = JSON.stringify(j * 3 + g * 2)
+
+        }
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+let SameThree = false;
+let SameTwos = false;
+
+for( let i = 1 ; i <= 6; i++){
+    let AmountSame = 0;
+    for( let g = 0; g < 5; g++){
+if(randomNum[g] == i){
+    AmountSame++;
+
+}
+    }
+    if(AmountSame == 3){
+        SameThree = true;
+    }
+}
+
+let SameTwo = 0;
+for (let i = 1; i <= 6 ; i++){
+    SameTwo= 0;
+for( j = 0; j < 5; j++){
+    if(randomNum[j] == i){
+        SameTwo++;
+    }
+}
+if(SameTwo == 2){
+SameTwos = true;
+}
+}
+if(SameThree && SameTwos){
+    console.log("fullhouse")
+    document.getElementById("punten-9").innerHTML = JSON.stringify( g * 3 + j * 2)
+}
